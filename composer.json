@@ -1,0 +1,14 @@
+{
+    "name": "marketplex/api",
+    "type": "library",
+    "version": "0.1",
+    "description": "API Client for the Marketplex API",
+    "homepage": "https://www.marketplex.fr",
+    "license": "MIT",
+    "require": {
+        "php": ">= 5.3"
+    },
+    "autoload": {
+        "psr-4": { "Marketplex\\Api\\": "src/" }
+    }
+}
