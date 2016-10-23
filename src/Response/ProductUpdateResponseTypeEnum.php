@@ -1,8 +1,7 @@
 <?php
+namespace Marketplex\Api\Response;
 
 use Marketplex\Api\Model\EnumAbstract;
-
-namespace Marketplex\Api\Response;
 
 class ProductUpdateResponseTypeEnum extends EnumAbstract {
     const INEXISTANT = "INEXISTANT";
