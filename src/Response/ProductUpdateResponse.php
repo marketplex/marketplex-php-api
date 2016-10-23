@@ -1,5 +1,7 @@
 <?php
 
+use Marketplex\Api\Response\ProductUpdateResponseTypeEnum;
+
 namespace Marketplex\Api\Response;
 
 class ProductUpdateResponse {
