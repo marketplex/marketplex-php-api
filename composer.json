@@ -6,7 +6,7 @@
     "homepage": "https://www.marketplex.fr",
     "license": "MIT",
     "require": {
-        "php": ">= 5.3"
+        "php": ">= 5.4"
     },
     "autoload": {
         "psr-4": { "Marketplex\\Api\\": "src/" }

@@ -4,7 +4,7 @@
 Bibliothèque PHP officielle pour utiliser l'API de Marketplex.fr
 
 ## Dépendances ##
-- PHP 5.3 ou plus
+- PHP 5.4 ou plus
 
 ## Installation ##
 Installation avec composer
