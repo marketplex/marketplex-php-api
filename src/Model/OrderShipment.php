@@ -4,27 +4,7 @@ namespace Marketplex\Api\Model;
 use DateTime;
 
 class OrderShipment extends ModelAbstract
-{
-    const CARRIER_LA_POSTE = "La Poste";
-    const CARRIER_CHRONOPOST = "Chronopost";
-    const CARRIER_COLISSIMO = "Colissimo";
-    const CARRIER_DHL_FRANCE = "DHL France";
-    const CARRIER_GLS = "GLS";
-    const CARRIER_COLIS_PRIVÉ = "Colis Privé";
-    const CARRIER_DPD = "DPD";
-    const CARRIER_MONDIAL_RELAY = "Mondial Relay";
-    const CARRIER_TNT = "TNT";
-    const CARRIER_UPS = "UPS";
-    const CARRIER_FEDEX = "Fedex";
-    const CARRIER_TATEX = "Tatex";
-    const CARRIER_FRANCE_EXPRESS = "France Express";
-    const CARRIER_KIALA = "Kiala";
-    const CARRIER_EXAPAQ = "Exapaq";
-    const CARRIER_BPOST = "Bpost";
-    const CARRIER_ROYAL_MAIL = "Royal Mail";
-    const CARRIER_CORREOS = "Correos";
-    const CARRIER_CIBLEX = "Ciblex";
-    
+{   
     /**
      * Marketplex Order ID
      * @var int
@@ -33,7 +13,7 @@ class OrderShipment extends ModelAbstract
     
     /**
      * Carrier company that deliver the shipment
-     * @var string
+     * @var CarrierEnum
      */
     public $carrier;
     
