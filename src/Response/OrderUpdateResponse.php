@@ -2,12 +2,12 @@
 
 namespace Marketplex\Api\Response;
 
-class ProductUpdateResponse {
+class OrderUpdateResponse {
     /**
      *
-     * @var string SKU
+     * @var int Marketplex order ID
      */
-    public $sku;
+    public $orderid;
     
     /**
      *
@@ -20,8 +20,8 @@ class ProductUpdateResponse {
      */
     public $message;
     
-    public function __construct($sku, $type, $message = "") {
-        $this->sku = $sku;
+    public function __construct($orderid, $type, $message = "") {
+        $this->orderid = $orderid;
         $this->type = $type;
         $this->message = $message;
     }

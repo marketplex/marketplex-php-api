@@ -5,6 +5,7 @@ use DateTime;
 use Exception;
 use Marketplex\Api\Model\Order;
 use Marketplex\Api\Model\OrderShipment;
+use Marketplex\Api\Response\OrderUpdateResponse;
 use Marketplex\Api\Response\PaginatedResponse;
 
 class ApiOrders extends ApiAbstract {
@@ -12,6 +13,7 @@ class ApiOrders extends ApiAbstract {
     
     /**
      * @param OrderShipment[] $shipments
+     * @return OrderUpdateResponse[]
      */
     public function postOrderShipments(array $shipments) {
         if(count($shipments) > self::MAX_ORDERS) throw new Exception("Can't post more than ".self::MAX_ORDERS." order shipments at the same time");

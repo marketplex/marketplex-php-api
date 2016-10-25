@@ -62,7 +62,6 @@ class PaginatedResponse implements JsonSerializable {
     public function getNextPage() {
         if(!$this->nextPage) return null;
         $data = $this->client->call("GET", $this->nextPage);
-        var_dump($data);exit;
         
         $resp = new PaginatedResponse($this->client);
         $resp->hydrate($data);

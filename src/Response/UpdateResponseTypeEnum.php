@@ -3,7 +3,7 @@ namespace Marketplex\Api\Response;
 
 use Marketplex\Api\Model\EnumAbstract;
 
-class ProductUpdateResponseTypeEnum extends EnumAbstract {
+class UpdateResponseTypeEnum extends EnumAbstract {
     const INEXISTANT = "INEXISTANT";
     const UPDATED    = "UPDATED";
     const NOCHANGE   = "NOCHANGE";
