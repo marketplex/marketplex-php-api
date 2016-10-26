@@ -13,7 +13,7 @@ class CarrierEnum extends EnumAbstract {
     const MONDIAL_RELAY = "Mondial Relay";
     const TNT = "TNT";
     const UPS = "UPS";
-    const FEDEX = "Fedex";
+    const FEDEX = "FedEx";
     const TATEX = "Tatex";
     const FRANCE_EXPRESS = "France Express";
     const KIALA = "Kiala";
