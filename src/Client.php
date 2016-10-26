@@ -9,14 +9,16 @@ use stdClass;
 class Client {
     protected $appkey;
     protected $secretkey;
+    protected $serviceHost;
     
     /**
      * @param string $appkey Your API key giving you access to the Marketplex API
      * @param string $secretkey Your private secret key for security
      */
-    public function __construct($appkey, $secretkey) {
+    public function __construct($appkey, $secretkey, $serviceHost = "api.marketplex.fr") {
         $this->appkey = $appkey;
         $this->secretkey = $secretkey;
+        $this->serviceHost = $serviceHost;
     }
     
     /**
@@ -89,7 +91,7 @@ class Client {
             ]
         ]);
                     
-        $result = file_get_contents('https://api.marketplex.livesys.fr'.$uri, false, $ctx);
+        $result = file_get_contents('https://'.$this->serviceHost.$uri, false, $ctx);
         $response = @json_decode($result);
         
         if(!$response) throw new Exception("Can't decode response from Marketplex API:\n\n{$result}", 1001);
