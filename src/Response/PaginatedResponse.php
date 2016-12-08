@@ -57,7 +57,7 @@ class PaginatedResponse implements JsonSerializable {
     }
 
     /**
-     * @return ResponseAbstract
+     * @return PaginatedResponse
      */
     public function getNextPage() {
         if(!$this->nextPage) return null;
