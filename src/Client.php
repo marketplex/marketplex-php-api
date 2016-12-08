@@ -61,7 +61,7 @@ class Client {
      * @return stdClass
      */
     public function get($uri, $params = []) {
-        $uri .= "?".http_build_query($params);
+        if(count($params)) $uri .= "?".http_build_query($params);
         return $this->call("GET", $uri);
     }
     
