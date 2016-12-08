@@ -4,6 +4,7 @@ namespace Marketplex\Api;
 use Exception;
 use Marketplex\Api\Model\Product;
 use Marketplex\Api\Model\Stock;
+use Marketplex\Api\Response\PaginatedResponse;
 
 class ApiProducts extends ApiAbstract {
     const MAX_PRODUCTS = 1000;
@@ -26,6 +27,18 @@ class ApiProducts extends ApiAbstract {
         if(count($stocks) > self::MAX_STOCKS) throw new Exception("Can't post more than ".self::MAX_STOCKS." stocks at the same time");
         
         return $this->client->post("/products/stocks", $stocks);
+    }
+    
+    /**
+     * 
+     * @return PaginatedResponse
+     */
+    public function getStocks($page = 1) {
+        $data = $this->client->get("/products/stocks", [$page]);
+        
+        $resp = new PaginatedResponse($this->client);
+        $resp->hydrate($data);
+        return $resp;
     }
 
 }
