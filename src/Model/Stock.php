@@ -16,7 +16,7 @@ class Stock extends ModelAbstract {
    
     /**
      *
-     * @var float
+     * @var int
      */
     public $quantity;
 }
