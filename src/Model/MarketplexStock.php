@@ -3,10 +3,9 @@
 namespace Marketplex\Api\Model;
 
 class MarketplexStock extends ModelAbstract {
-    public function __construct($sku, $quantity, $reserved_quantity = 0) {
+    public function __construct($sku, $quantity) {
         $this->sku = $sku;
         $this->quantity = $quantity;
-        $this->reserved_quantity = $reserved_quantity;
     }
     
     /**
