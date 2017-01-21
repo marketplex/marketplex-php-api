@@ -90,4 +90,29 @@ class Product extends ModelAbstract {
      * @var AmazonData
      */
     public $amazondata = null;
+    
+    /**
+     * @var string
+     */
+    public $brand;
+    
+    /**
+     * @var string
+     */
+    public $edition;
+    
+    /**
+     * @var string
+     */
+    public $publisher;
+    
+    /**
+     * @var string
+     */
+    public $author;
+    
+    /**
+     * @var string
+     */
+    public $binding;
 }
