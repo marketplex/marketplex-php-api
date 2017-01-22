@@ -36,6 +36,19 @@ class Product extends ModelAbstract {
     const IMAGE_IMAGE5 = "image5";
     const IMAGE_IMAGE6 = "image6";
     
+    /**
+     * Couverture rigide (Cartonné, relié)
+     */
+    const BINDING_HARDCOVER = "Hardcover";
+    /**
+     * Couverture souple (Broché, poche)
+     */
+    const BINDING_SOFTCOVER = "Softcover";
+    /**
+     * Pas de couverture
+     */
+    const BINDING_NONE = "None";
+    
     public function __construct($sku) {
         $this->sku = $sku;
     }
@@ -99,12 +112,12 @@ class Product extends ModelAbstract {
     /**
      * @var string
      */
-    public $edition;
+    public $publisher;
     
     /**
-     * @var string
+     * @var int
      */
-    public $publisher;
+    public $publishYear;
     
     /**
      * @var string
