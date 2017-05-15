@@ -92,11 +92,14 @@ class Client {
         ]);
                     
         $result = file_get_contents('https://'.$this->serviceHost.$uri, false, $ctx);
+        if(!$result) throw new Exception("Can't load https://{$this->serviceHost}{$uri}", 1000);
+
         $response = @json_decode($result);
-        
         if(!$response) throw new Exception("Can't decode response from Marketplex API:\n\n{$result}", 1001);
+        
         if(!isset($response->status)) throw new Exception("Bad response from Marketplex API", 1002);
         if($response->status == "error") throw new Exception("Marketplex API Error: {$response->message}", 1003);
+        
         return $response->response;
     }
 }
