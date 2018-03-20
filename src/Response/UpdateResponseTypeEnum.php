@@ -9,4 +9,5 @@ class UpdateResponseTypeEnum extends EnumAbstract {
     const NOCHANGE   = "NOCHANGE";
     const INSERTED   = "INSERTED";
     const ERROR      = "ERROR";
+    const REMOVED    = "REMOVED";
 }

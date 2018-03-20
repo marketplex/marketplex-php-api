@@ -20,6 +20,15 @@ class ApiProducts extends ApiAbstract {
     }
     
     /**
+     * @param string[] $skus
+     */
+    public function removeProducts(array $skus) {
+        if(count($skus) > self::MAX_PRODUCTS) throw new Exception("Can't remove more than ".self::MAX_PRODUCTS." products at the same time");
+        
+        return $this->client->post("/products/remove", $skus);
+    }
+    
+    /**
      * 
      * @param Stock[] $stocks
      */
