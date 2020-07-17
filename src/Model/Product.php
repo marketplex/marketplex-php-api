@@ -26,6 +26,7 @@ class Product extends ModelAbstract {
     const CURRENCY_EUR = "EUR";
     const CURRENCY_GBP = "GBP";
     const CURRENCY_USD = "USD";
+    const CURRENCY_CAD = "CAD";
     
     const IMAGE_MAIN = "image_main";
     const IMAGE_OFFER = "image_offer";
