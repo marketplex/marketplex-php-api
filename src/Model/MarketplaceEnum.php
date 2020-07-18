@@ -8,6 +8,8 @@ class MarketplaceEnum extends EnumAbstract {
     const AMAZON_IT = "Amazon.it";
     const AMAZON_DE = "Amazon.de";
     const AMAZON_COM = "Amazon.com";
+    const AMAZON_CA = "Amazon.ca";
+    const AMAZON_NL = "Amazon.nl";
     const ABEBOOKS_FR   = "AbeBooks.fr";
     const ABEBOOKS_ES   = "IberLibro.com";
     const ABEBOOKS_COM   = "AbeBooks.com";

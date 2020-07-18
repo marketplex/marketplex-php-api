@@ -22,6 +22,7 @@ class Product extends ModelAbstract {
     const LOCALE_DE = "de";
     const LOCALE_IT = "it";
     const LOCALE_ES = "es";
+    const LOCALE_NL = "nl";
     
     const CURRENCY_EUR = "EUR";
     const CURRENCY_GBP = "GBP";
