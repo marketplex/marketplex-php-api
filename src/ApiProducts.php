@@ -9,6 +9,7 @@ use Marketplex\Api\Response\PaginatedResponse;
 class ApiProducts extends ApiAbstract {
     const MAX_PRODUCTS = 1000;
     const MAX_STOCKS = 10000;
+    const MAX_PRICES = 10000;
     
      /**
      * @param Product[] $products
@@ -36,6 +37,16 @@ class ApiProducts extends ApiAbstract {
         if(count($stocks) > self::MAX_STOCKS) throw new Exception("Can't post more than ".self::MAX_STOCKS." stocks at the same time");
         
         return $this->client->post("/products/stocks", $stocks);
+    }
+    
+    /**
+     * 
+     * @param PriceList[] $prices
+     */
+    public function postPrices(array $prices) {
+        if(count($prices) > self::MAX_PRICES) throw new Exception("Can't post more than ".self::MAX_PRICES." prices at the same time");
+        
+        return $this->client->post("/products/prices", $prices);
     }
     
     /**
