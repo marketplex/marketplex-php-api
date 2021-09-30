@@ -38,6 +38,14 @@ class Client {
     }
     
     /**
+     * 
+     * @return ApiMarketplaces
+     */
+    public function getMarketplacesApi() {
+        return new ApiMarketplaces($this);
+    }
+    
+    /**
      * @param string $uri
      * @param JsonSerializable $data
      * @return stdClass
