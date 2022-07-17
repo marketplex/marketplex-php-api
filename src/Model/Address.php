@@ -21,6 +21,11 @@ class Address extends ModelAbstract {
     /**
      * @var string
      */
+    public $phone2;
+    
+    /**
+     * @var string
+     */
     public $addressLine1;
     
     /**

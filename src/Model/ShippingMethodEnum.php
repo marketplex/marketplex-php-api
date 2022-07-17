@@ -4,6 +4,8 @@ namespace Marketplex\Api\Model;
 class ShippingMethodEnum extends EnumAbstract {
     const STANDARD = "Standard";
     const EXPRESS = "Express";
+    const TRACKED = "Tracked";
+    const REGISTERED = "Registered";
         
     // Amazon Fulfillment Network (FBA - Fulfilled By Amazon)
     const AFN_STANDARD = "AFN Standard";
@@ -13,4 +15,9 @@ class ShippingMethodEnum extends EnumAbstract {
     const SECOND_DAY        = "SecondDay";
     const SAME_DAY          = "SameDay";
     const NEXT_DAY          = "NextDay";
+    
+    // Prepaid methods (Rakuten)
+    const PREPAID_MONDIALRELAY = "Mondial Relay Prepaid";
+    const PREPAID_SOCOLISSIMO = "SO Colissimo Prepaid";
+    const PREPAID_CHRONOPOST = "Chronopost Prepaid";
 }
