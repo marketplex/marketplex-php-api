@@ -19,4 +19,5 @@ class MarketplaceEnum extends EnumAbstract {
     const BIBLIO_COM   = "Biblio.com";
     const RAKUTEN_FR = "Rakuten FR";
     const FNAC_FR = "Fnac FR";
+    const FNAC_BE = "Fnac BE";
 }
