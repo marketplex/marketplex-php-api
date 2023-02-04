@@ -1,10 +1,10 @@
 <?php
 
-namespace Marketplex\Api\Model;
+namespace Marketplex\Api\Model\Product;
 
-use Marketplex\Api\Model\Amazon\AmazonData;
+use Marketplex\Api\Model\ModelAbstract;
 
-class Product extends ModelAbstract {
+abstract class ProductAbstract extends ModelAbstract {
     const CONDITION_NEW = 1;
     const CONDITION_USED_LIKE_NEW = 2;
     const CONDITION_USED_VERY_GOOD = 3;
@@ -38,22 +38,20 @@ class Product extends ModelAbstract {
     const IMAGE_IMAGE5 = "image5";
     const IMAGE_IMAGE6 = "image6";
     
-    /**
-     * Couverture rigide (Cartonné, relié)
-     */
-    const BINDING_HARDCOVER = "Hardcover";
-    /**
-     * Couverture souple (Broché, poche)
-     */
-    const BINDING_SOFTCOVER = "Softcover";
-    /**
-     * Pas de couverture
-     */
-    const BINDING_NONE = "None";
-    
     public function __construct($sku) {
         $this->sku = $sku;
+        $this->category = $this->getCategory();
     }
+    
+    /**
+     * @return Category
+     */
+    abstract public function getCategory();
+    
+    /**
+     * @var string
+     */
+    protected $category;
     
     /**
      *
@@ -100,34 +98,4 @@ class Product extends ModelAbstract {
      * @var string[] Indexed by image type
      */
     public $images = [];
-    
-    /**
-     * @var AmazonData
-     */
-    public $amazondata = null;
-    
-    /**
-     * @var string
-     */
-    public $brand;
-    
-    /**
-     * @var string
-     */
-    public $publisher;
-    
-    /**
-     * @var int
-     */
-    public $publishYear;
-    
-    /**
-     * @var string
-     */
-    public $author;
-    
-    /**
-     * @var string
-     */
-    public $binding;
 }

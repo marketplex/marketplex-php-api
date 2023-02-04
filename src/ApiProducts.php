@@ -2,7 +2,8 @@
 namespace Marketplex\Api;
 
 use Exception;
-use Marketplex\Api\Model\Product;
+use Marketplex\Api\Model\PriceList;
+use Marketplex\Api\Model\Product\ProductAbstract;
 use Marketplex\Api\Model\Stock;
 use Marketplex\Api\Response\PaginatedResponse;
 
@@ -12,7 +13,7 @@ class ApiProducts extends ApiAbstract {
     const MAX_PRICES = 10000;
     
      /**
-     * @param Product[] $products
+     * @param ProductAbstract[] $products
      */
     public function postProducts(array $products) {
         if(count($products) > self::MAX_PRODUCTS) throw new Exception("Can't post more than ".self::MAX_PRODUCTS." products at the same time");

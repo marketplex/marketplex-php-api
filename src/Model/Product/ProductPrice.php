@@ -1,5 +1,5 @@
 <?php
-namespace Marketplex\Api\Model;
+namespace Marketplex\Api\Model\Product;
 
 class ProductPrice {
     public $price;
