@@ -23,6 +23,7 @@ abstract class ProductAbstract extends ModelAbstract {
     const LOCALE_IT = "it";
     const LOCALE_ES = "es";
     const LOCALE_NL = "nl";
+    const LOCALE_PT = "pt";
     
     const CURRENCY_EUR = "EUR";
     const CURRENCY_GBP = "GBP";
