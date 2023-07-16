@@ -75,28 +75,28 @@ abstract class ProductAbstract extends ModelAbstract {
     /**
      * @var float[] Indexed by currency
      */
-    public $prices = [];
+    public $prices;
     
     /**
      * @var string[] Indexed by identifier
      */
-    public $identifiers = [];
+    public $identifiers;
     
     /**
      *
      * @var string[] Indexed by locale
      */
-    public $titles = [];
+    public $titles;
     
     /**
      *
      * @var string[] Indexed by locale
      */
-    public $comments = [];
+    public $comments;
     
     /**
      *
      * @var string[] Indexed by image type
      */
-    public $images = [];
+    public $images;
 }
