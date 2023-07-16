@@ -14,11 +14,12 @@ class ApiProducts extends ApiAbstract {
     
      /**
      * @param ProductAbstract[] $products
+     * @param bool $partialUpdates If true, uninitialized properties will be ignored, otherwise any previous value will be removed
      */
-    public function postProducts(array $products) {
+    public function postProducts(array $products, $partialUpdates = false) {
         if(count($products) > self::MAX_PRODUCTS) throw new Exception("Can't post more than ".self::MAX_PRODUCTS." products at the same time");
         
-        return $this->client->post("/products/add", $products);
+        return $this->client->post("/products/add".($partialUpdates ? '?partialUpdates' : ''), $products);
     }
     
     /**
