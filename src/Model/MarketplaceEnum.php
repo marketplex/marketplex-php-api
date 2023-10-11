@@ -16,6 +16,7 @@ class MarketplaceEnum extends EnumAbstract {
     const ABEBOOKS_IT   = "AbeBooks.it";
     const ABEBOOKS_DE   = "AbeBooks.de";
     const ABEBOOKS_CO_UK   = "AbeBooks.co.uk";
+    const ABEBOOKS_ZVAB   = "Zvab.com";
     const BIBLIO_COM   = "Biblio.com";
     const RAKUTEN_FR = "Rakuten FR";
     const FNAC_FR = "Fnac FR";
