@@ -22,6 +22,7 @@ class CarrierEnum extends EnumAbstract {
     const ROYAL_MAIL = "Royal Mail";
     const CORREOS = "Correos";
     const CIBLEX = "Ciblex";
+    const SPPRING = "Spring";
     
     // Custom values authorized
     public function __construct($name) {
