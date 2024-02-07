@@ -16,6 +16,9 @@ class ShippingMethodEnum extends EnumAbstract {
     const SAME_DAY          = "SameDay";
     const NEXT_DAY          = "NextDay";
     
+    // PICKUP DELIVERY
+    const MONDIAL_RELAY = "Mondial Relay";
+    
     // Prepaid methods (Rakuten)
     const PREPAID_MONDIALRELAY = "Mondial Relay Prepaid";
     const PREPAID_SOCOLISSIMO = "SO Colissimo Prepaid";
